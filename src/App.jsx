@@ -1,4 +1,4 @@
-
+import './App.css'
 function App() {
   const[todos, setTodos] = useState([
     {
@@ -27,9 +27,17 @@ function App() {
       <div className="todo-list">
         {todos.map((todo) => (
           <div className="content">
+            <div>
             <p>{todo.text}</p>
             <p className="category">({todo.category})</p>
+            </div>
+            <div>
+              <button>Completar</button>
+              <button>x</button>
+            </div>
+
           </div>
+         
           
         ))}
       </div>
